@@ -16,3 +16,7 @@
 -Faça o download do https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe
 
 -Copie o programa yt-dlp.exe e também cole na pasta bin/Debug do baixar_do_youtube
+
+-No visual studio em Program: coloque seu endereço MAC da sua placa de rede ethernet
+
+-Compile e pronto!
