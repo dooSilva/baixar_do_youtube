@@ -9,7 +9,7 @@ namespace baixarMusicasYoutube
 {
     internal static class Program
     {
-        ////MÉTODO PARA PEGAR O ENDEREÇO MAC DA PLACA DE REDE DO COMPUTADOR
+        //MÉTODO PARA PEGAR O ENDEREÇO MAC DA PLACA DE REDE DO COMPUTADOR
         public static string GetMacAddress()
         {
             return NetworkInterface
@@ -25,9 +25,9 @@ namespace baixarMusicasYoutube
         ///LISTA DOS MAC PERMITIDOS PARA A CONEXAO
         static readonly string[] MacsPermitidos =
         {
-            "D09466BA4CC4",
-            "047C16C4C7E1",
-            "441CA8BFCAB3"
+            "D09466BA515B",
+            "7C8899B5E645",
+            "047C16C4C7E1"
         };
         /// /////////////////////////////////////////////////////////////////////////
 
@@ -37,7 +37,7 @@ namespace baixarMusicasYoutube
         {
             ///PEGANDO MAC DO COMPUTADOR E COMPARANDO COM A LISTA//////
             string macAtual = GetMacAddress();
-            if (macAtual == null || !MacsPermitidos.Contains(macAtual))
+            if (macAtual == null || !MacsPermitidos.Contains(macAtual)) //VERIFICA SE O MAC ATUAL ESTA NA LISTA DE PERMITIDOS
             {
                 MessageBox.Show(
                     "Dispositivo sem acesso a internet, ou sem permissão",
@@ -45,7 +45,7 @@ namespace baixarMusicasYoutube
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
-                return;
+                return; //ENCERRA A APLICAÇÃO SE O MAC NÃO FOR PERMITIDO
             }
             ///////////////////////////////////////////////////////
 
