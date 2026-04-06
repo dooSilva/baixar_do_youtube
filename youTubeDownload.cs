@@ -29,7 +29,7 @@ namespace baixarMusicasYoutube
                     var psi = new ProcessStartInfo // Configura o processo para executar o yt-dlp com os argumentos necessários
                     {
                         FileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "yt-dlp.exe"), // Caminho para o executável do yt-dlp
-                        Arguments = $"-x --audio-format mp3 --audio-quality 0 --no-playlist " + $"-o \"{pastaDestino}\\%(title)s.%(ext)s\" " + $"\"{url}\"", // Argumentos para extrair o áudio, definir a qualidade, evitar playlists e especificar o formato de saída
+                        Arguments = $"-x --audio-format mp3 --audio-quality 5 --no-playlist " + $"-o \"{pastaDestino}\\%(title)s.%(ext)s\" " + $"\"{url}\"", // Argumentos para extrair o áudio, definir a qualidade, evitar playlists e especificar o formato de saída
                         UseShellExecute = false, // Necessário para redirecionar a saída
                         RedirectStandardOutput = true, // Redireciona a saída padrão para capturar o progresso
                         RedirectStandardError = true, // Redireciona a saída de erro para capturar mensagens de erro
